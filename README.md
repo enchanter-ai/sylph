@@ -423,7 +423,7 @@ Sylph isn't replacing git. It's **the layer above it** that you were building pi
 
 ## Agent Conduct (11 Modules)
 
-Every skill inherits a reusable behavioral contract from [shared/conduct/](shared/conduct/) — loaded once into [CLAUDE.md](CLAUDE.md), applied across all plugins. This is how Claude *acts* inside Sylph: deterministic, surgical, verifiable. Not a suggestion; a contract.
+Every skill inherits a reusable behavioral contract from [shared/foundations/conduct/](shared/foundations/conduct/) — loaded once into [CLAUDE.md](CLAUDE.md), applied across all plugins. This is how Claude *acts* inside Sylph: deterministic, surgical, verifiable. Not a suggestion; a contract.
 
 | Module | What it governs |
 |--------|-----------------|
