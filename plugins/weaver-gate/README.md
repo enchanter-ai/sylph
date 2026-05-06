@@ -4,7 +4,7 @@
 
 Inspects every `git` invocation via `PreToolUse(Bash)`. If the command matches a destructive-op pattern (force-push, `filter-branch`, `reset --hard` past pushed tip, `branch -D`, `tag -d`, `clean -fdx`, remote-branch deletion, `commit --amend` of a pushed HEAD, merge-queue `--admin` bypass), the gate **WARNS** about the operation via a stderr advisory — it **never blocks**. The model reads the advisory and decides whether to proceed, optionally routing through the `destructive-gate-confirmation` skill for explicit confirmation.
 
-**Advisory contract.** Per [shared/conduct/hooks.md](../../shared/conduct/hooks.md): hooks inform, they don't decide. The hook always exits 0. Blocking semantics, when needed, live in a Skill the model invokes deliberately.
+**Advisory contract.** Per [shared/foundations/conduct/hooks.md](../../shared/foundations/conduct/hooks.md): hooks inform, they don't decide. The hook always exits 0. Blocking semantics, when needed, live in a Skill the model invokes deliberately.
 
 No engine — rules-only. Haiku classifies destructive vs safe per the pattern table. Protected-branch force-push: **never** bypassed. `git clean -fdx`: **never** bypassed (irrecoverable — reflog doesn't cover ignored files).
 

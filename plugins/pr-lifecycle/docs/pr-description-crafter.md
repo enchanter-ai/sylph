@@ -1,7 +1,7 @@
 # pr-description-crafter
 
 > Moved from `skills/pr-description-crafter/SKILL.md` — pure-explainer content;
-> per [shared/conduct/skill-authoring.md](../../../shared/conduct/skill-authoring.md)
+> per [shared/foundations/conduct/skill-authoring.md](../../../shared/foundations/conduct/skill-authoring.md)
 > "one verb per skill", explainer-only material lives in docs, not in the skill registry.
 > The `pr-description-crafter` *agent* (`agents/pr-description-crafter.md`) is the
 > active worker; this doc explains the inputs and fallback ladder it follows.
