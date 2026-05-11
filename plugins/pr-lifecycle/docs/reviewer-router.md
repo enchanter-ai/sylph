@@ -1,7 +1,7 @@
 # reviewer-router
 
 > Moved from `skills/reviewer-router/SKILL.md` — pure-explainer content; per
-> [shared/foundations/conduct/skill-authoring.md](../../../shared/foundations/conduct/skill-authoring.md)
+> [../enchanter-foundations/packages/skills/conduct/skill-authoring.md](../../../../enchanter-foundations/packages/skills/conduct/skill-authoring.md)
 > "one verb per skill", explainer-only material lives in docs, not in the skill registry.
 
 ## The scoring function
