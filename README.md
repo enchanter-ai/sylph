@@ -211,18 +211,13 @@ If you skip setup entirely, Sylph runs in degraded mode — commit drafting + W2
 
 ## Quickstart
 
-Install, probe the host, commit. Sixty seconds:
-
-```
-/plugin install full@sylph
-/sylph:setup
-/sylph:commit
+```bash
+git clone https://github.com/enchanter-ai/sylph
+cd sylph
+./scripts/bootstrap.sh    # canonical first command — installs enchanter-foundations sibling
 ```
 
-Expected: `/sylph:setup` classifies your host + CI + auth in one pass, prompting only for a token when needed. `/sylph:commit` drafts a Conventional Commits message from the staged diff (W1 Sonnet + Haiku validate), signs it, and commits — without you touching `git commit -m`. See [docs/getting-started.md](docs/getting-started.md) for the full first-PR walkthrough.
-
----
-
+Without `./scripts/bootstrap.sh`, conduct imports will silently miss and Claude Code's `@`-loader will fail-soft. Always bootstrap first.
 ## 8 Plugins, 5 Agents, 15 Commands
 
 | Plugin | Command(s) | What | Agent (tier) |
