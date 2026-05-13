@@ -214,7 +214,7 @@ If you skip setup entirely, Sylph runs in degraded mode — commit drafting + W2
 ```bash
 git clone https://github.com/enchanter-ai/sylph
 cd sylph
-./scripts/bootstrap.sh    # canonical first command — installs foundations sibling
+./scripts/bootstrap.sh    # canonical first command — installs vis sibling
 ```
 
 Without `./scripts/bootstrap.sh`, conduct imports will silently miss and Claude Code's `@`-loader will fail-soft. Always bootstrap first.
@@ -418,20 +418,20 @@ Sylph isn't replacing git. It's **the layer above it** that you were building pi
 
 ## Agent Conduct (11 Modules)
 
-Every skill inherits a reusable behavioral contract from [shared/foundations/conduct/](shared/foundations/conduct/) — loaded once into [CLAUDE.md](CLAUDE.md), applied across all plugins. This is how Claude *acts* inside Sylph: deterministic, surgical, verifiable. Not a suggestion; a contract.
+Every skill inherits a reusable behavioral contract from [shared/vis/conduct/](shared/vis/conduct/) — loaded once into [CLAUDE.md](CLAUDE.md), applied across all plugins. This is how Claude *acts* inside Sylph: deterministic, surgical, verifiable. Not a suggestion; a contract.
 
 | Module | What it governs |
 |--------|-----------------|
-| [discipline.md](../foundations/packages/core/conduct/discipline.md) | Coding conduct: think-first, simplicity, surgical edits, goal-driven loops |
-| [context.md](../foundations/packages/core/conduct/context.md) | Attention-budget hygiene, U-curve placement, checkpoint protocol |
-| [verification.md](../foundations/packages/core/conduct/verification.md) | Independent checks, baseline snapshots, dry-run for destructive ops |
-| [delegation.md](../foundations/packages/core/conduct/delegation.md) | Subagent contracts, tool whitelisting, parallel vs. serial rules |
-| [failure-modes.md](../foundations/packages/core/conduct/failure-modes.md) | 14-code taxonomy for `state/learnings.json` so W5 Gauss Accumulation compounds |
-| [tool-use.md](../foundations/packages/core/conduct/tool-use.md) | Tool-choice hygiene, error payload contract, parallel-dispatch rules |
-| [formatting.md](../foundations/packages/skills/conduct/formatting.md) | Per-target format (XML / Markdown sandwich / minimal / few-shot), prefill + stop sequences |
-| [skill-authoring.md](../foundations/packages/skills/conduct/skill-authoring.md) | SKILL.md frontmatter discipline, discovery test |
-| [hooks.md](../foundations/packages/core/conduct/hooks.md) | Advisory-only hooks, injection over denial, fail-open |
-| [precedent.md](../foundations/packages/core/conduct/precedent.md) | Log self-observed failures to `state/precedent-log.md`; consult before risky steps |
+| [discipline.md](../vis/packages/core/conduct/discipline.md) | Coding conduct: think-first, simplicity, surgical edits, goal-driven loops |
+| [context.md](../vis/packages/core/conduct/context.md) | Attention-budget hygiene, U-curve placement, checkpoint protocol |
+| [verification.md](../vis/packages/core/conduct/verification.md) | Independent checks, baseline snapshots, dry-run for destructive ops |
+| [delegation.md](../vis/packages/core/conduct/delegation.md) | Subagent contracts, tool whitelisting, parallel vs. serial rules |
+| [failure-modes.md](../vis/packages/core/conduct/failure-modes.md) | 14-code taxonomy for `state/learnings.json` so W5 Gauss Accumulation compounds |
+| [tool-use.md](../vis/packages/core/conduct/tool-use.md) | Tool-choice hygiene, error payload contract, parallel-dispatch rules |
+| [formatting.md](../vis/packages/skills/conduct/formatting.md) | Per-target format (XML / Markdown sandwich / minimal / few-shot), prefill + stop sequences |
+| [skill-authoring.md](../vis/packages/skills/conduct/skill-authoring.md) | SKILL.md frontmatter discipline, discovery test |
+| [hooks.md](../vis/packages/core/conduct/hooks.md) | Advisory-only hooks, injection over denial, fail-open |
+| [precedent.md](../vis/packages/core/conduct/precedent.md) | Log self-observed failures to `state/precedent-log.md`; consult before risky steps |
 
 ---
 
@@ -477,7 +477,7 @@ npx -y -p @mermaid-js/mermaid-cli mmdc -i docs/architecture/highlevel.mmd \
 
 ## Acknowledgments
 
-Sylph builds on foundations laid by others:
+Sylph builds on substrate laid by others:
 
 - **[Claude Code](https://github.com/anthropics/claude-code)** (Anthropic) — the plugin surface this work extends.
 - **[Keep a Changelog](https://keepachangelog.com/)** — CHANGELOG convention.
