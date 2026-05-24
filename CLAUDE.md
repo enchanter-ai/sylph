@@ -37,14 +37,14 @@ Sylph is hook-driven, not skill-invoked. Auto-orchestration is the product's rea
 | Event / Skill | Plugin | Role |
 |---|---|---|
 | `SessionStart` | capability-memory | Load provider registry, probe git host + CI; cache capabilities |
-| `SessionStart` | weaver-learning | Load W5 per-developer priors |
+| `SessionStart` | sylph-learning | Load W5 per-developer priors |
 | `SessionStart` | ci-reader | Load CI registry |
 | `PostToolUse(Edit\|Write\|MultiEdit)` | boundary-segmenter | W2 clusters edit events into task boundaries; checkpoints clusters at PreCompact |
 | On boundary | branch-workflow | W3 picks branch strategy; scaffolds the branch |
 | On boundary | commit-intelligence | W1 drafts Conventional Commits message; Haiku + Python validate |
 | `PostToolUse(Bash)` | pr-lifecycle | On committed boundary, W4 opens draft PR, routes reviewers, subscribes to CI status |
-| `PreToolUse(Bash)` | weaver-gate | Destructive-op decision-gate (force-push, rebase, reset, clean) |
-| `PreCompact` | weaver-learning | W5 checkpoints developer preferences + cluster state |
+| `PreToolUse(Bash)` | sylph-gate | Destructive-op decision-gate (force-push, rebase, reset, clean) |
+| `PreCompact` | sylph-learning | W5 checkpoints developer preferences + cluster state |
 
 Matchers in `./plugins/<name>/hooks/hooks.json`. Agents in `./plugins/<name>/agents/`.
 
@@ -58,12 +58,12 @@ W1 Myers-Diff Conventional Classifier · W2 Jaccard-Cosine Boundary Segmentation
 | W2 | Jaccard-Cosine Boundary Segmentation | boundary-segmenter | Online agglomerative clustering; `d = α·(1−jaccard(files)) + β·(1−cosine(tokens)) + γ·tanh(idle/τ)`. α=β=0.4, γ=0.2, τ=300 s, θ=0.55. Crow V1 embedding if available; stdlib bag-of-tokens otherwise. | Jaccard P. (1901); Salton, Wong, Yang (1975); Hearst M.A. (1997), "TextTiling", Computational Linguistics 23(1):33-64 |
 | W3 | Workflow-Pattern Classifier | branch-workflow | Weighted decision tree over branch-age distribution, protection rules, config-file markers, tag cadence. Classifies: stacked-diffs / gitflow / release-flow / trunk-based / github-flow / unknown. Per-subtree overrides via `.sylph/workflow-map.yaml`. | Driessen V. (2010), "A successful Git branching model"; Quinlan J.R. (1986), "Induction of Decision Trees", Machine Learning 1(1):81-106 |
 | W4 | Blame-Weighted Reviewer Ranker | pr-lifecycle | Weighted sum: `blame_score × recency_decay × path_depth × codeowners_boost × availability`. 90-day half-life on last-commit timestamp, CODEOWNERS union boost (1.5×), top-3 cap. | Thongtanunam et al. (2015), "Who should review my code?", IEEE/ACM SANER 2015:141-150 (file-history-based reviewer recommendation) |
-| W5 | Gauss Learning (Sylph) | weaver-learning | EMA update `new = α·signal + (1−α)·old`, α=0.3. Tracks commit style, branch-naming, PR turnaround, reviewer overrides, W2 threshold corrections per-developer. Bootstrap floor at 10 samples; below floor, priors are ignored. | Gauss C.F. (1809), "Theoria motus corporum coelestium" (least-squares); ecosystem precedent: Wixie F6, Emu A7, Crow H6, Djinn C5, Gorgon G5, Naga N5 |
+| W5 | Gauss Learning (Sylph) | sylph-learning | EMA update `new = α·signal + (1−α)·old`, α=0.3. Tracks commit style, branch-naming, PR turnaround, reviewer overrides, W2 threshold corrections per-developer. Bootstrap floor at 10 samples; below floor, priors are ignored. | Gauss C.F. (1809), "Theoria motus corporum coelestium" (least-squares); ecosystem precedent: Wixie F6, Emu A7, Crow H6, Djinn C5, Gorgon G5, Naga N5 |
 
 ## Behavioral contracts
 
 1. **IMPORTANT — Silent by default, loud when risky.** Auto-orchestration is invisible when it works. Decision-gates are blocking only for destructive ops. Nothing routine asks for permission.
-2. **YOU MUST NOT write history rewrites without gate confirmation.** Even if the developer asks, route through `weaver-gate`. The developer's explicit confirmation is logged, not assumed.
+2. **YOU MUST NOT write history rewrites without gate confirmation.** Even if the developer asks, route through `sylph-gate`. The developer's explicit confirmation is logged, not assumed.
 3. **ESCALATE on SourceHut push operations.** SourceHut uses mailing-list PRs — if the developer's remote points to SourceHut, degrade to patch-email mode and surface the divergence.
 4. **ESCALATE when the capability registry is stale.** If `state/capability-registry.json` is older than 30 days and the developer is on a Tier-1 host, nudge toward a nightly-refresh check.
 5. **Ask, don't guess.** If `git status` is dirty at session-start or the branch naming doesn't match the detected workflow, ask before continuing. Never fabricate a task-boundary when none is certain.
@@ -83,9 +83,9 @@ W1 Myers-Diff Conventional Classifier · W2 Jaccard-Cosine Boundary Segmentation
 | `plugins/commit-intelligence/state/metrics.jsonl` | commit-intelligence | Per-commit W1 classification metrics |
 | `plugins/pr-lifecycle/state/last-reviewer-suggestion.json` | pr-lifecycle | W4's last blame-graph reviewer ranking |
 | `plugins/pr-lifecycle/state/pending-prs.jsonl` | pr-lifecycle | Open PRs being monitored for CI status |
-| `plugins/weaver-gate/state/audit.jsonl` | weaver-gate | Every gated/blocked destructive op — append-only, Emu-A4 atomic write |
-| `plugins/weaver-learning/state/learnings.json` | weaver-learning | W5 EMA priors, cross-session |
-| `plugins/weaver-learning/state/priors.json` | weaver-learning | Session-cached slice downstream engines read |
+| `plugins/sylph-gate/state/audit.jsonl` | sylph-gate | Every gated/blocked destructive op — append-only, Emu-A4 atomic write |
+| `plugins/sylph-learning/state/learnings.json` | sylph-learning | W5 EMA priors, cross-session |
+| `plugins/sylph-learning/state/priors.json` | sylph-learning | Session-cached slice downstream engines read |
 | `plugins/ci-reader/state/ci-registry.json` | ci-reader | 10-CI-system registry; gates merge-queue entry; ArgoCD/WixieCD read-only |
 
 ## Agent tiers

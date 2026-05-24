@@ -107,7 +107,7 @@ class PRDescription:
         else:
             body_parts.append("## Why\n")
             body_parts.append(
-                "_Raven V4 session-continuity data unavailable — this PR description "
+                "_Crow V4 session-continuity data unavailable — this PR description "
                 "reflects W2 cluster metadata + commit messages only. Install crow "
                 "to upgrade._\n"
             )

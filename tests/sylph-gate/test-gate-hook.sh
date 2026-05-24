@@ -46,30 +46,32 @@ assert_jq "$audit" '.verdict_exit' "0" "safe audit records exit 0"
 assert_jq "$audit" '.op' "status" "safe audit records op 'status'"
 ok "safe command: exit 0, audit recorded"
 
-# Case 2: destructive command → exit 2, audit records verdict_exit=1, recovery days set.
+# Case 2: destructive command → exit 0 (advisory contract), audit records verdict_exit=1, recovery days set.
+# Per shared/conduct/hooks.md and plugins/sylph-gate/README.md: the hook always
+# exits 0 and emits a stderr advisory; blocking semantics live in a Skill, not the hook.
 rm -f "$audit"
 set +e
 output="$(printf '%s' '{"tool_input":{"command":"git push --force origin main"}}' | bash "$fake_plugin_root/hooks/pre-tool-use/inspect-git-command.sh" 2>&1)"
 rc=$?
 set -e
-assert_exit_code "2" "$rc" "destructive command blocks with exit 2"
-assert_jq "$audit" '.verdict_exit' "1" "destructive audit records exit 1"
+assert_exit_code "0" "$rc" "destructive command exits 0 (advisory contract)"
+assert_jq "$audit" '.verdict_exit' "1" "destructive audit records classifier exit 1"
 assert_jq "$audit" '.op' "git push --force" "destructive audit records op"
 assert_jq "$audit" '.recovery_days' "30" "destructive audit records recovery window"
-assert_contains "$output" "Destructive git operation detected" "stderr surfaces the block reason"
-ok "destructive command: exit 2, audit + stderr OK"
+assert_contains "$output" "destructive git operation detected" "stderr surfaces the advisory reason"
+ok "destructive command: advisory exit 0, audit + stderr OK"
 
-# Case 3: protected-destructive → exit 2, audit records verdict_exit=2.
+# Case 3: protected-destructive → exit 0 (advisory contract), audit records verdict_exit=2.
 rm -f "$audit"
 set +e
 output="$(printf '%s' '{"tool_input":{"command":"git clean -fdx"}}' | bash "$fake_plugin_root/hooks/pre-tool-use/inspect-git-command.sh" 2>&1)"
 rc=$?
 set -e
-assert_exit_code "2" "$rc" "protected-destructive blocks with exit 2"
-assert_jq "$audit" '.verdict_exit' "2" "protected-destructive audit records exit 2"
+assert_exit_code "0" "$rc" "protected-destructive exits 0 (advisory contract)"
+assert_jq "$audit" '.verdict_exit' "2" "protected-destructive audit records classifier exit 2"
 assert_jq "$audit" '.op' "git clean -fdx" "protected-destructive audit records op"
 assert_jq "$audit" '.recovery_days' "0" "protected-destructive recovery = 0 (irrecoverable)"
-ok "protected-destructive: exit 2, audit + stderr OK"
+ok "protected-destructive: advisory exit 0, audit + stderr OK"
 
 # Case 4: non-git → exit 0, NO audit record (short-circuit before classification).
 rm -f "$audit"
