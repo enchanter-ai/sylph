@@ -1,0 +1,30 @@
+{
+  "name": "capability-memory",
+  "version": "0.0.1",
+  "description": "Provider capability registry \u2014 the 'memory' of how each git host behaves. Ships baseline data for 9 hosts (GitHub, GitLab, Bitbucket Cloud/DC, Azure DevOps, Gitea/Forgejo/Codeberg, AWS CodeCommit, SourceHut); refreshed nightly by CI and probed at runtime for GitLab self-managed version drift.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "git-hosts",
+    "capability-registry",
+    "provider-abstraction",
+    "memory"
+  ],
+  "interface": {
+    "displayName": "Capability Memory",
+    "shortDescription": "Provider capability registry \u2014 the 'memory' of how each git host behaves. Ships\u2026",
+    "longDescription": "Provider capability registry \u2014 the 'memory' of how each git host behaves. Ships baseline data for 9 hosts (GitHub, GitLab, Bitbucket Cloud/DC, Azure DevOps, Gitea/Forgejo/Codeberg, AWS CodeCommit, SourceHut); refreshed nightly by CI and probed at runtime for GitLab self-managed version drift.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Capability Memory on my project"
+    ]
+  },
+  "skills": "./skills/"
+}

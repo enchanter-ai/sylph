@@ -1,0 +1,32 @@
+{
+  "name": "boundary-segmenter",
+  "version": "0.1.0",
+  "description": "W2 \u2014 Jaccard-Cosine Boundary Segmentation. Sylph's defining engine. Clusters PostToolUse(Edit|Write) events into task boundaries via multi-modal distance (file-set Jaccard + token cosine + idle-time gap). Standalone: works without Crow V1 by deriving token vectors from edit content. Upgraded automatically when Crow V1 embeddings are available on the event bus.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "boundary-segmentation",
+    "clustering",
+    "W2",
+    "defining-engine",
+    "jaccard-cosine"
+  ],
+  "interface": {
+    "displayName": "Boundary Segmenter",
+    "shortDescription": "W2 \u2014 Jaccard-Cosine Boundary Segmentation. Sylph's defining engine. Clusters Po\u2026",
+    "longDescription": "W2 \u2014 Jaccard-Cosine Boundary Segmentation. Sylph's defining engine. Clusters PostToolUse(Edit|Write) events into task boundaries via multi-modal distance (file-set Jaccard + token cosine + idle-time gap). Standalone: works without Crow V1 by deriving token vectors from edit content. Upgraded automatically when Crow V1 embeddings are available on the event bus.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Boundary Segmenter on my project"
+    ]
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

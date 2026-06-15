@@ -1,0 +1,32 @@
+{
+  "name": "commit-intelligence",
+  "version": "0.0.1",
+  "description": "W1 \u2014 Myers-Diff Conventional Classifier. Drafts Conventional Commits messages via a Sonnet agent (Stage 1), validates format + policy via a Haiku agent and a Python stdlib rules pass (Stage 2). Safe-amend detection blocks rewriting pushed commits.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "commits",
+    "conventional-commits",
+    "myers-diff",
+    "W1",
+    "git"
+  ],
+  "interface": {
+    "displayName": "Commit Intelligence",
+    "shortDescription": "W1 \u2014 Myers-Diff Conventional Classifier. Drafts Conventional Commits messages v\u2026",
+    "longDescription": "W1 \u2014 Myers-Diff Conventional Classifier. Drafts Conventional Commits messages via a Sonnet agent (Stage 1), validates format + policy via a Haiku agent and a Python stdlib rules pass (Stage 2). Safe-amend detection blocks rewriting pushed commits.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Commit Intelligence on my project"
+    ]
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

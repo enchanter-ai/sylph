@@ -1,0 +1,31 @@
+{
+  "name": "ci-reader",
+  "version": "0.2.0",
+  "description": "Read-only CI status + log streaming across GitHub Actions, GitLab CI, CircleCI, Jenkins, Buildkite, Drone/Woodpecker, Tekton, ArgoCD/WixieCD. Ships ci-registry.json \u2014 a declarative capability surface for all 10 systems (auth modes, rate limits, status/conclusion enums, webhook event taxonomy, known quirks) loaded at SessionStart. Normalizes per-system check payloads into a typed Check interface and emits sylph.ci.status.observed events. GitHub Actions fully implemented via gh CLI; 7 other systems stub and degrade to manual-handoff; ArgoCD/WixieCD are GitOps read-only drift detection.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ci-cd",
+    "status-reader",
+    "github-actions",
+    "jenkins",
+    "gitlab-ci"
+  ],
+  "interface": {
+    "displayName": "Ci Reader",
+    "shortDescription": "Read-only CI status + log streaming across GitHub Actions, GitLab CI, CircleCI,\u2026",
+    "longDescription": "Read-only CI status + log streaming across GitHub Actions, GitLab CI, CircleCI, Jenkins, Buildkite, Drone/Woodpecker, Tekton, ArgoCD/WixieCD. Ships ci-registry.json \u2014 a declarative capability surface for all 10 systems (auth modes, rate limits, status/conclusion enums, webhook event taxonomy, known quirks) loaded at SessionStart. Normalizes per-system check payloads into a typed Check interface a\u2026",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Ci Reader on my project"
+    ]
+  },
+  "skills": "./skills/"
+}

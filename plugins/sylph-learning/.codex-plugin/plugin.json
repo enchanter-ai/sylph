@@ -1,0 +1,30 @@
+{
+  "name": "sylph-learning",
+  "version": "0.1.0",
+  "description": "W5 \u2014 Gauss Learning (Sylph). Per-developer preference persistence via exponential moving averages with Emu-A4 atomic serialization. Tracks commit-style (scope rate, body rate, types), branch-naming conventions, PR turnaround, reviewer overrides, W2 corrections. Priors flow back to W1/W2/W3/W4 after the bootstrap sample floor.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gauss-accumulation",
+    "preference-learning",
+    "W5",
+    "ema"
+  ],
+  "interface": {
+    "displayName": "Sylph Learning",
+    "shortDescription": "W5 \u2014 Gauss Learning (Sylph). Per-developer preference persistence via exponenti\u2026",
+    "longDescription": "W5 \u2014 Gauss Learning (Sylph). Per-developer preference persistence via exponential moving averages with Emu-A4 atomic serialization. Tracks commit-style (scope rate, body rate, types), branch-naming conventions, PR turnaround, reviewer overrides, W2 corrections. Priors flow back to W1/W2/W3/W4 after the bootstrap sample floor.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Sylph Learning on my project"
+    ]
+  },
+  "skills": "./skills/"
+}

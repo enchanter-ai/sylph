@@ -1,0 +1,31 @@
+{
+  "name": "pr-lifecycle",
+  "version": "0.1.0",
+  "description": "W4 \u2014 Path-History Reviewer Routing + idempotent PR state machine. Opens draft PRs with session-context descriptions (upgrades to Crow V4 when available), ranks reviewers via git-blame + CODEOWNERS + optional availability events, drives merge-queue integration. GitHub fully implemented via gh CLI; 9 other hosts stub cleanly and degrade to manual-handoff mode.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "pr-lifecycle",
+    "reviewer-routing",
+    "W4",
+    "merge-queue",
+    "github"
+  ],
+  "interface": {
+    "displayName": "Pr Lifecycle",
+    "shortDescription": "W4 \u2014 Path-History Reviewer Routing + idempotent PR state machine. Opens draft P\u2026",
+    "longDescription": "W4 \u2014 Path-History Reviewer Routing + idempotent PR state machine. Opens draft PRs with session-context descriptions (upgrades to Crow V4 when available), ranks reviewers via git-blame + CODEOWNERS + optional availability events, drives merge-queue integration. GitHub fully implemented via gh CLI; 9 other hosts stub cleanly and degrade to manual-handoff mode.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Pr Lifecycle on my project"
+    ]
+  },
+  "skills": "./skills/"
+}

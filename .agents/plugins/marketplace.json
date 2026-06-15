@@ -1,0 +1,116 @@
+{
+  "name": "sylph",
+  "interface": {
+    "displayName": "Sylph"
+  },
+  "plugins": [
+    {
+      "name": "boundary-segmenter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/boundary-segmenter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "branch-workflow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/branch-workflow"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "capability-memory",
+      "source": {
+        "source": "local",
+        "path": "./plugins/capability-memory"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "ci-reader",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ci-reader"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "commit-intelligence",
+      "source": {
+        "source": "local",
+        "path": "./plugins/commit-intelligence"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "full",
+      "source": {
+        "source": "local",
+        "path": "./plugins/full"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "pr-lifecycle",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pr-lifecycle"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "sylph-gate",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sylph-gate"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "sylph-learning",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sylph-learning"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

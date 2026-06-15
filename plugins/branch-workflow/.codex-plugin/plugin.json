@@ -1,0 +1,31 @@
+{
+  "name": "branch-workflow",
+  "version": "0.1.0",
+  "description": "W3 \u2014 Workflow-Pattern Classifier. Infers the active branching model (GitHub Flow / Trunk-Based / GitFlow / Release Flow / Stacked Diffs / Unknown) from repo signals and suggests a branch name for the next task boundary. Per-subtree support for monorepos via .sylph/workflow-map.yaml.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "branching",
+    "workflow-detection",
+    "W3",
+    "monorepo"
+  ],
+  "interface": {
+    "displayName": "Branch Workflow",
+    "shortDescription": "W3 \u2014 Workflow-Pattern Classifier. Infers the active branching model (GitHub Flo\u2026",
+    "longDescription": "W3 \u2014 Workflow-Pattern Classifier. Infers the active branching model (GitHub Flow / Trunk-Based / GitFlow / Release Flow / Stacked Diffs / Unknown) from repo signals and suggests a branch name for the next task boundary. Per-subtree support for monorepos via .sylph/workflow-map.yaml.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Branch Workflow on my project"
+    ]
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "sylph-gate",
+  "version": "0.0.1",
+  "description": "Destructive-op decision-gate for git. Inspects every Bash invocation; routes force-push, history rewrite, branch/tag deletion, clean -fdx, and merge-queue bypass through a confirmation surface before execution.",
+  "author": {
+    "name": "Enchanter Labs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "safety",
+    "decision-gate",
+    "destructive-op",
+    "audit",
+    "crow-pattern"
+  ],
+  "interface": {
+    "displayName": "Sylph Gate",
+    "shortDescription": "Destructive-op decision-gate for git. Inspects every Bash invocation; routes fo\u2026",
+    "longDescription": "Destructive-op decision-gate for git. Inspects every Bash invocation; routes force-push, history rewrite, branch/tag deletion, clean -fdx, and merge-queue bypass through a confirmation surface before execution.",
+    "developerName": "Enchanter Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Sylph Gate on my project"
+    ]
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
