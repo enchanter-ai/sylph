@@ -35,9 +35,11 @@ and Sylph ignores the learned priors.
 Stdlib only.
 
 Reference:
-    Gauss C.F. (1809), "Theoria motus corporum coelestium in sectionibus
-    conicis solem ambientium" (least-squares foundation for recursive
-    EMA-with-posterior updates). Ecosystem precedent: Wixie F6, Emu A7,
+    Brown R.G. (1956), "Exponential Smoothing for Predicting Demand";
+    Holt C.C. (1957), "Forecasting Trends and Seasonals by Exponentially
+    Weighted Moving Averages" (exponential-smoothing foundation for the
+    EMA update, paired with a conjugate Beta-Binomial posterior for the
+    accept/reject signal). Ecosystem precedent: Wixie F6, Emu A7,
     Crow H6, Djinn C5, Gorgon G5, Naga N5.
 """
 
