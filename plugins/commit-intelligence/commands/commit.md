@@ -66,7 +66,7 @@ Otherwise compute them fresh from `git diff --staged`.
 5. Apply
    ├─ Assemble final args: `git commit [-S if signing] -m "<final message>"`.
    ├─ For --amend of unpushed: `git commit --amend -m "..."`.
-   └─ For --amend of pushed: abort (sylph-gate blocks; suggest a follow-up commit).
+   └─ For --amend of pushed: abort (sylph-gate only warns advisory-only; this workflow itself refuses to amend pushed history — suggest a follow-up commit instead).
 
 6. Mark the consumed draft executed (if one was accepted):
    `shared/scripts/pending_inbox.py mark plugins/commit-intelligence/state/pending-drafts.jsonl <record_ts> sha=<sha>`

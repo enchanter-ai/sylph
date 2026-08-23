@@ -384,7 +384,7 @@
         </div>
         <div class="plugin-card">
           <h3>sylph-gate</h3>
-          <p class="desc">Destructive-op decision-gate for git. Inspects every Bash invocation; routes force-push, history rewrite, branch/tag deletion, clean -fdx, and merge-queue bypass through a confirmation surface before execution.</p>
+          <p class="desc">Destructive-op advisory for git. Inspects every Bash invocation; surfaces a stderr warning (never blocks) for force-push, history rewrite, branch/tag deletion, clean -fdx, and merge-queue bypass — the model decides whether to proceed, optionally via the destructive-gate-confirmation skill.</p>
           <div class="section-label">Hooks</div>
           <div class="hook"><span class="phase">PreToolUse</span> <span class="matcher">Bash</span> → <code>inspect-git-command.sh</code> <span class="dim">(5s)</span></div>
           <div class="section-label">Skills</div>
