@@ -34,4 +34,4 @@ The plugins coordinate via the enchanted-mcp event bus. Cherry-picking is suppor
 
 So `full` is the supported default. Cherry-pick only when you know which event flows you're opting out of.
 
-Full architecture: [../../docs/ARCHITECTURE.md](../../docs/ARCHITECTURE.md).
+Full architecture: [../../docs/architecture/README.md](../../docs/architecture/README.md).
