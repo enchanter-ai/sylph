@@ -14,4 +14,4 @@ Changes to the `HostAdapter` contract, the W3 workflow classifier's output label
 
 ## Current version
 
-See [CHANGELOG.md](../CHANGELOG.md) for the current version and recent changes. As of this writing Sylph is on v0.0.1; no breaking-change migrations are documented yet. This page is a stub until the first tagged release and its eventual major bump.
+See [CHANGELOG.md](../CHANGELOG.md) for the current version and recent changes. As of this writing Sylph is on v1.0.0; no breaking-change migrations are documented yet. This page is a stub until the next major bump introduces one.

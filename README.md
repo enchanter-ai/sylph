@@ -11,7 +11,7 @@
   <img alt="10 CI systems" src="https://img.shields.io/badge/CI-10-d29922?style=for-the-badge">
   <img alt="15 slash commands" src="https://img.shields.io/badge/Commands-15-f0883e?style=for-the-badge">
   <img alt="5 named engines (W1-W5)" src="https://img.shields.io/badge/Engines-W1--W5-ff7b72?style=for-the-badge">
-  <img alt="28 tests passing" src="https://img.shields.io/badge/Tests-28%2F28-3fb950?style=for-the-badge">
+  <img alt="50 tests passing" src="https://img.shields.io/badge/Tests-50%2F50-3fb950?style=for-the-badge">
   <img alt="Zero runtime deps (bash plus jq plus Python stdlib)" src="https://img.shields.io/badge/Deps-0-f85149?style=for-the-badge">
   <a href="https://www.repostatus.org/#active"><img alt="Project Status: Active" src="https://www.repostatus.org/badges/latest/active.svg"></a>
 </p>
@@ -441,7 +441,7 @@ Auto-generated from `plugin.json` + `hooks.json` + skill/agent frontmatter — c
 
 <p align="center">
   <img src="docs/assets/highlevel.svg"
-       alt="Sylph high-level: 9 plugins coordinating through the enchanted-mcp event bus"
+       alt="Sylph high-level: 8 plugins coordinating through the enchanted-mcp event bus"
        width="100%" style="max-width: 900px;">
 </p>
 

@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [1.0.0] — rename: sylph identity, standardized origin format
 
+The current shipped release (tag `v1.0.0`). See [README.md](README.md) for the complete feature surface.
+
 ### Added
 - Tier-1 governance docs: `SECURITY.md`, `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`.
 - `.github/` scaffold: issue templates, PR template, CODEOWNERS, dependabot config.
@@ -15,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [0.0.1] — initial public release
 
-The current shipped release. See [README.md](README.md) for the complete feature surface.
+The initial public release, superseded by 1.0.0. See [README.md](README.md) for the complete feature surface.
 
 ### Highlights
 - 8 plugins covering the git-workflow lifecycle: capability-memory, sylph-gate, boundary-segmenter, sylph-learning, and sibling sub-plugins.
@@ -26,7 +28,8 @@ The current shipped release. See [README.md](README.md) for the complete feature
 - Destructive-op decision gate (sylph-gate) modeled after the Crow pattern.
 - Boundary-segmenter: task-boundary clustering on post-tool events.
 - Per-developer learning via W5 Gauss EMA — preferences persist across compaction.
-- 28/28 tests passing. Zero runtime dependencies (bash + jq + Python stdlib).
+- 50/50 tests passing. Zero runtime dependencies (bash + jq + Python stdlib).
 
-[Unreleased]: https://github.com/enchanter-ai/sylph/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/enchanter-ai/sylph/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/enchanter-ai/sylph/releases/tag/v1.0.0
 [0.0.1]: https://github.com/enchanter-ai/sylph/releases/tag/v0.0.1
