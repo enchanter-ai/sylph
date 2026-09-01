@@ -8,7 +8,7 @@ Open [index.html](index.html) in a browser to explore the architecture interacti
 
 ## At a Glance
 
-**9 sub-plugins. 5 algorithms (W1–W5). 5 agents. 6 hook bindings. 30 tests.**
+**8 sub-plugins. 5 algorithms (W1–W5). 5 agents. 6 hook bindings. 50 tests.**
 
 Sylphs are silk-spinners — branches are threads, merges stitch them into a coherent history. Sylph covers the full git-flow arc: boundary detection → branch → commit → PR → CI observation → learning.
 
@@ -16,7 +16,7 @@ Sylphs are silk-spinners — branches are threads, merges stitch them into a coh
 
 | Diagram | File | Description |
 |---------|------|-------------|
-| High Level | [highlevel.mmd](highlevel.mmd) | 9 sub-plugins across SessionStart / PreToolUse / PostToolUse / PreCompact |
+| High Level | [highlevel.mmd](highlevel.mmd) | 8 sub-plugins across SessionStart / PreToolUse / PostToolUse / PreCompact |
 | Session Lifecycle | [lifecycle.mmd](lifecycle.mmd) | Load priors → gate destructive ops → segment → draft → push → observe |
 | Data Flow | [dataflow.mmd](dataflow.mmd) | Cross-plugin events via enchanted-mcp event bus |
 | Hook Bindings | [hooks.mmd](hooks.mmd) | Hook binding map with matchers and timeouts per sub-plugin |
