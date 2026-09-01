@@ -130,7 +130,7 @@ Add 5 more plugins covering code quality, testing, DevOps, documentation, and AP
 | 18 | **Synapse** | CRDT Knowledge Merging | Collaboration |
 | 19 | **Vault** | Three-Way Merge Diffing | Database |
 | 20 | **Relay** | Event Sourcing + Saga Pattern | Webhooks |
-| 21 | **Sylph** ✓ | Jaccard-Cosine Boundary Segmentation + Myers-Diff Conventional Classifier | Git workflow (shipped early — v0.0.1, 9 plugins) |
+| 21 | **Sylph** ✓ | Jaccard-Cosine Boundary Segmentation + Myers-Diff Conventional Classifier | Git workflow (shipped early — v1.0.0, 8 plugins) |
 
 ### Production MCP Features
 
