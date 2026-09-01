@@ -43,7 +43,7 @@ Shipped today: Wixie, Emu, Crow, Hydra, Sylph, Djinn. Planned: Pech, Gorgon, Nag
 │  Wixie  │ │Emu │ │ Crow  │ │Hydra│ │ Sylph │ │ Djinn │ │  + Phase │
 │ prompt │ │token │ │ change  │ │sec-  │ │ git    │ │intent│ │   3-4    │
 │ craft  │ │health│ │ trust   │ │urity │ │ flow   │ │anchor│ │ plugins  │
-│  v4.0  │ │ v2.0 │ │  v1.0   │ │ v1.0 │ │ v0.0.1 │ │ v0.1 │ │          │
+│  v4.0  │ │ v2.0 │ │  v1.0   │ │ v1.0 │ │ v1.0.0 │ │ v0.1 │ │          │
 └────────┘ └──────┘ └─────────┘ └──────┘ └────────┘ └──────┘ └──────────┘
  Ars       Alex's    Alex's    Twilight   Ars         Ars     Ice and Fire,
  Nouveau   Mobs      Mobs      Forest     Nouveau     Nouveau  Twilight Forest,
