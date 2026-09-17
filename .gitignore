@@ -37,3 +37,9 @@ docs/assets/package.json
 # Editor
 .vscode/
 .idea/
+
+# Windows null-device artifact: `> NUL` under a POSIX shell creates a real file
+NUL
+
+# pytest cache
+.pytest_cache/
